@@ -53,14 +53,26 @@ var myLibrary = function() {
 		var newNum = parseInt(string, 10);
 		return newNum;
 	};
+
+// Finds the smallest number in an array that is larger than the given number.
+	var getNextNum = function(number){
+		var arraySet = [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100];
+		for (i = 0; i < arraySet.length; i++)
+			if (arraySet[i] < number){
+				null;				
+			}else{
+				return arraySet[i];
+				break;
+			};
+	};
 	
 	return{
 		"phoneCheck"	:	phoneCheck,
 		"isEmail"		:	isEmail,
 		"urlCheck"		:	urlCheck,
 		"dollarDecimal"	:	dollarDecimal,
-		"string2Num"	:	string2Num
-		
+		"string2Num"	:	string2Num,
+		"getNextNum"	:	getNextNum		
 	};
 };
 
@@ -71,3 +83,4 @@ console.log(newLibrary.isEmail("ericmareth@marethphotography.com"));
 console.log(newLibrary.urlCheck("http://www.marethphotography.com"));
 console.log(newLibrary.dollarDecimal(42.1974));
 console.log(newLibrary.string2Num("42"));
+console.log(newLibrary.getNextNum(23));
