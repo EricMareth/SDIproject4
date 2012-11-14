@@ -48,18 +48,18 @@ var myLibrary = function() {
 		return dubDecimal;
 	};
 	
-// Converts number strings to actual numbers.
-//	var string2Num = function(numString){
-//		var newNum = parseFloat(numString);
-//		return newNum;
-//	};
+// Converts number strings to actual number.
+	var string2Num = function(string){
+		var newNum = parseInt(string, 10);
+		return newNum;
+	};
 	
 	return{
 		"phoneCheck"	:	phoneCheck,
 		"isEmail"		:	isEmail,
 		"urlCheck"		:	urlCheck,
-		"dollarDecimal"	:	dollarDecimal
-//		"string2Num"	:	string2Num
+		"dollarDecimal"	:	dollarDecimal,
+		"string2Num"	:	string2Num
 		
 	};
 };
@@ -70,4 +70,4 @@ console.log(newLibrary.phoneCheck("407-922-6687"));
 console.log(newLibrary.isEmail("ericmareth@marethphotography.com"));
 console.log(newLibrary.urlCheck("http://www.marethphotography.com"));
 console.log(newLibrary.dollarDecimal(42.1974));
-//console.log(newLibrary.string2Num("42 + 42"));
+console.log(newLibrary.string2Num("42"));
